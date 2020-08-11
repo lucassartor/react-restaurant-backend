@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 var path = require('path');
+
 //Import Routes
 const postsRoute = require('./routes/posts');
 const dishesRoute = require('./routes/dishes');
@@ -13,6 +15,7 @@ const commentsRoute = require('./routes/comments');
 require('dotenv/config');
 
 //Middleware
+app.use(cors());
 app.use(bodyParser.json());
 app.use('/posts', postsRoute);
 app.use('/dishes', dishesRoute);
@@ -20,7 +23,6 @@ app.use('/leaders', leadersRoute);
 app.use('/promotions', promotionsRoute);
 app.use('/comments', commentsRoute);
 app.use('/images', express.static('public'));
-
 
 
 //Routes
