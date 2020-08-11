@@ -12,7 +12,7 @@ const router = express.Router();
 });*/
 
 router.get('/', function(req,res) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://reactrestaurant-backend.herokuapp.com');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.send([
             {
                 "id": 0,

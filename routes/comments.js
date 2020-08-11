@@ -4,7 +4,7 @@ const Comment = require('../models/Comment');
 
 //Returns all the comments
 router.get('/', async (req,res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://reactrestaurant-backend.herokuapp.com');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     try{
         const comments = await Comment.find();
         res.json(comments);
@@ -15,7 +15,7 @@ router.get('/', async (req,res) => {
 
 //Submit a comment
 router.post('/', async (req, res) =>{
-    res.setHeader('Access-Control-Allow-Origin', 'https://reactrestaurant-backend.herokuapp.com');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     const comment = new Comment({
         dishId: req.body.dishId,
         rating: req.body.rating,
