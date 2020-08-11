@@ -42,4 +42,4 @@ mongoose.connect(process.env.DB_CONNECTION,
 );
 
 //Start listening to the server
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
