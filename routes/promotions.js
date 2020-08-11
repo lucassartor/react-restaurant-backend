@@ -12,6 +12,7 @@ router.get('/', function(req,res) {
                 "price": "19.99",
                 "featured": true,
                 "description": "Featuring mouthwatering combinations with a choice of five different salads, six enticing steaks, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person!"
+
             }
         ]
     );
